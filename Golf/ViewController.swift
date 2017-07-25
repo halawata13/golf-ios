@@ -4,6 +4,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var playMatView: PlayMatView?
+    var gameResultView: GameResultView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,20 @@ class ViewController: UIViewController {
             playMatView.removeFromSuperview()
         }
 
+        if let gameResultView = gameResultView {
+            gameResultView.removeFromSuperview()
+        }
+
         playMatView = PlayMatView()
+        playMatView!.delegate = self
         view.addSubview(playMatView!)
+    }
+}
+
+extension ViewController: PlayMatViewDelegate {
+
+    func gameClear() {
+        gameResultView = GameResultView(frame: view.frame)
+        view.addSubview(gameResultView!)
     }
 }

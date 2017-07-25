@@ -11,10 +11,12 @@ class PlayMatView: UIView {
     static let overlapHeight = 30
     static let stageY = 510
 
-    var targets = [[CardView]]()
-    var deck = [Card]()
-    var stageCardView: CardView!
-    var deckCardView: UIImageView!
+    var delegate: PlayMatViewDelegate?
+
+    fileprivate var targets = [[CardView]]()
+    fileprivate var deck = [Card]()
+    fileprivate var stageCardView: CardView!
+    fileprivate var deckCardView: UIImageView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -174,8 +176,24 @@ class PlayMatView: UIView {
             view.moveTo(stageCardView.frame.origin)
             self.stageCardView = targets[view.card.column!].popLast()!
 
+            // 操作可能カードを設定
             setUserInteractionEnabled()
+
+            // ゲームクリアチェック
+            let _ = isGameClear()
         }
+    }
+
+    /// 場札がなくなってゲームクリアしているか
+    func isGameClear() -> Bool {
+        for column in targets {
+            if column.isEmpty == false {
+                return false
+            }
+        }
+
+        delegate?.gameClear()
+        return true
     }
 }
 
@@ -206,6 +224,9 @@ extension PlayMatView: CardViewDelegate {
 
             // 操作可能カードを設定
             setUserInteractionEnabled()
+
+            // ゲームクリアチェック
+            let _ = isGameClear()
         } else {
             view.moveToPrevious()
         }
