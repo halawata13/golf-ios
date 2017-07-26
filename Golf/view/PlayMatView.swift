@@ -181,6 +181,8 @@ class PlayMatView: UIView {
 
             // ゲームクリアチェック
             let _ = isGameClear()
+        } else {
+            view.moveToPrevious()
         }
     }
 
@@ -212,6 +214,10 @@ extension PlayMatView: CardViewDelegate {
         } else {
             view.removeShadow()
         }
+    }
+
+    /// 移動キャンセル
+    func touchesCancelled(view: CardView) {
     }
 
     /// 移動終了

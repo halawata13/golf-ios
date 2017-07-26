@@ -6,5 +6,7 @@ protocol CardViewDelegate: class {
 
     func touchesMoved(view: CardView)
 
+    func touchesCancelled(view: CardView)
+
     func touchesEnded(view: CardView)
 }

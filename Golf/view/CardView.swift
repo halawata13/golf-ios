@@ -47,6 +47,17 @@ class CardView: DraggableView {
         delegate?.touchesMoved(view: cardView)
     }
 
+    /// 移動キャンセル
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+
+        guard let cardView = touches.first?.view as? CardView else {
+            return
+        }
+
+        delegate?.touchesCancelled(view: cardView)
+    }
+
     /// 移動終了
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)

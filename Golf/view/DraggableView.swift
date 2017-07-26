@@ -31,14 +31,4 @@ class DraggableView: UIView {
         let location = touch.location(in: self)
         frame = frame.offsetBy(dx: location.x - initialTouchLocation.x, dy: location.y - initialTouchLocation.y)
     }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first,
-              let initialTouchLocation = initialTouchLocation else {
-            return
-        }
-
-        let location = touch.location(in: self)
-        frame = frame.offsetBy(dx: location.x - initialTouchLocation.x, dy: location.y - initialTouchLocation.y)
-    }
 }
