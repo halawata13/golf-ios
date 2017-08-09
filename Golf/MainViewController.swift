@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     var playMatView: PlayMatView?
     var gameResultView: GameResultView?
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: PlayMatViewDelegate {
+extension MainViewController: PlayMatViewDelegate {
 
     func gameClear() {
         gameResultView = GameResultView(frame: view.frame)
