@@ -3,13 +3,15 @@ import UIKit
 
 class PlayMatView: UIView {
 
-    static let columns = 5
-    static let rows = 7
     static let cardWidth = 100
     static let gutterWidth = 40
     static let startY = 100
     static let overlapHeight = 30
+    static let deckX = 700
     static let stageY = 510
+
+    let columns: Int
+    let rows: Int
 
     var delegate: PlayMatViewDelegate?
 
@@ -19,6 +21,10 @@ class PlayMatView: UIView {
     fileprivate var deckCardView: UIImageView!
 
     override init(frame: CGRect) {
+        // 設定を取得
+        columns = Column.get()
+        rows = Row.get()
+
         super.init(frame: frame)
 
         // カードを取得してデッキにセット
@@ -28,14 +34,14 @@ class PlayMatView: UIView {
         deck = playingCard.deck
 
         // デッキから場札を配置
-        let totalCatdWidth = PlayMatView.cardWidth * PlayMatView.columns
-        let totalMarginWidth = PlayMatView.gutterWidth * (PlayMatView.columns - 1)
+        let totalCatdWidth = PlayMatView.cardWidth * columns
+        let totalMarginWidth = PlayMatView.gutterWidth * (columns - 1)
         let startX = (Int(frame.width) - totalCatdWidth - totalMarginWidth) / 2
 
-        for i in 0..<PlayMatView.columns {
+        for i in 0..<columns {
             var column = [CardView]()
 
-            for j in 0..<PlayMatView.rows {
+            for j in 0..<rows {
                 guard let card = deck.popLast() else {
                     fatalError("Too few cards.")
                 }
@@ -66,7 +72,7 @@ class PlayMatView: UIView {
         // デッキを配置
         deckCardView = UIImageView(image: UIImage(named: "back"))
         deckCardView.isUserInteractionEnabled = true
-        deckCardView.frame.origin = CGPoint(x: startX + PlayMatView.cardWidth * (PlayMatView.columns - 1) + PlayMatView.gutterWidth * (PlayMatView.columns - 2), y: PlayMatView.stageY)
+        deckCardView.frame.origin = CGPoint(x: PlayMatView.deckX, y: PlayMatView.stageY)
 
         let tapRestsCardsRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapRestsCard))
         deckCardView.addGestureRecognizer(tapRestsCardsRecognizer)

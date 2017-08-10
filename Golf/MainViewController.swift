@@ -11,9 +11,14 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         title = "Golf"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(onTapRestart))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(onTapRestart))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Config", style: .plain, target: self, action: #selector(onTapConfig))
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
         start()
+
+        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +29,17 @@ class MainViewController: UIViewController {
     /// リスタートボタン
     func onTapRestart() {
         start()
+    }
+
+    /// 設定ボタン
+    func onTapConfig() {
+        guard let configNavigationController = storyboard?.instantiateViewController(withIdentifier: "ConfigNavigationController") else {
+            assertionFailure()
+            return
+        }
+
+        configNavigationController.modalTransitionStyle = .crossDissolve
+        present(configNavigationController, animated: true)
     }
 
     /// ゲーム開始
