@@ -17,6 +17,7 @@ class ConfigTableViewDataSource: NSObject, UITableViewDataSource {
 
         cell.titleLabel.text = Config.titleList[indexPath.row]
         cell.numberLabel.text = String(configItem.number)
+        cell.checkButtonEnabled(configItem: configItem)
 
         return cell
     }

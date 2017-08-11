@@ -17,6 +17,7 @@ class ConfigTableViewCell: UITableViewCell {
         configItem.plus()
 
         numberLabel.text = String(configItem.number)
+        checkButtonEnabled(configItem: configItem)
     }
 
     @IBAction func onTapMinusButton(_ sender: UIButton) {
@@ -28,5 +29,11 @@ class ConfigTableViewCell: UITableViewCell {
         configItem.minus()
 
         numberLabel.text = String(configItem.number)
+        checkButtonEnabled(configItem: configItem)
+    }
+
+    func checkButtonEnabled(configItem: ConfigItem) {
+        plusButton.alpha = configItem.isMax ? 0.2 : 1
+        minusButton.alpha = configItem.isMin ? 0.2 : 1
     }
 }

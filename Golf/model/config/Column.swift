@@ -19,6 +19,14 @@ class Column: ConfigItem {
         }
     }
 
+    var isMax: Bool {
+        return number == Column.max
+    }
+
+    var isMin: Bool {
+        return number == Column.min
+    }
+
     init() {
         self.number = Column.get()
     }

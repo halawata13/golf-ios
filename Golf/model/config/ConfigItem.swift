@@ -8,6 +8,8 @@ protocol ConfigItem: class {
     static var defaultNumber: Int { get }
 
     var number: Int { get set }
+    var isMax: Bool { get }
+    var isMin: Bool { get }
 
     static func get() -> Int
 

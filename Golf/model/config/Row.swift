@@ -19,6 +19,14 @@ class Row: ConfigItem {
         }
     }
 
+    var isMax: Bool {
+        return number == Row.max
+    }
+
+    var isMin: Bool {
+        return number == Row.min
+    }
+
     init() {
         self.number = Row.get()
     }
