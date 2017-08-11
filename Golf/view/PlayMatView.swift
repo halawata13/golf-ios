@@ -214,11 +214,11 @@ extension PlayMatView: CardViewDelegate {
 
     /// 移動中
     func touchesMoved(view: CardView) {
-        if view.frame.intersects(stageCardView.frame),
+        if stageCardView.frame.intersects(view.frame),
            PlayingCard.isPassing(view.card, and: stageCardView.card) {
-            view.addShadow()
+            stageCardView.addShadow()
         } else {
-            view.removeShadow()
+            stageCardView.removeShadow()
         }
     }
 
@@ -230,6 +230,8 @@ extension PlayMatView: CardViewDelegate {
     func touchesEnded(view: CardView) {
         if view.frame.intersects(stageCardView.frame),
            PlayingCard.isPassing(view.card, and: stageCardView.card) {
+            stageCardView.removeShadow()
+
             // 手札と連番ならその場札を手札へ
             view.moveTo(stageCardView.frame.origin)
             self.stageCardView = targets[view.card.column!].popLast()!
@@ -241,8 +243,7 @@ extension PlayMatView: CardViewDelegate {
             let _ = isGameClear()
         } else {
             view.moveToPrevious()
+            stageCardView.removeShadow()
         }
-
-        view.removeShadow()
     }
 }
