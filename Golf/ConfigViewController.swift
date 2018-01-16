@@ -17,7 +17,7 @@ class ConfigViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(onDone))
     }
 
-    func onDone() {
+    @objc func onDone() {
         navigationController?.dismiss(animated: true)
     }
 }

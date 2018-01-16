@@ -27,12 +27,12 @@ class MainViewController: UIViewController {
     }
 
     /// リスタートボタン
-    func onTapRestart() {
+    @objc func onTapRestart() {
         start()
     }
 
     /// 設定ボタン
-    func onTapConfig() {
+    @objc func onTapConfig() {
         guard let configNavigationController = storyboard?.instantiateViewController(withIdentifier: "ConfigNavigationController") else {
             assertionFailure()
             return

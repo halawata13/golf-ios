@@ -90,7 +90,7 @@ class PlayMatView: UIView {
         self.init(frame: UIScreen.main.bounds)
     }
 
-    func onTapRestsCard(_ recognizer: UITapGestureRecognizer) {
+    @objc func onTapRestsCard(_ recognizer: UITapGestureRecognizer) {
         guard let card = deck.last else {
             return
         }
@@ -172,7 +172,7 @@ class PlayMatView: UIView {
     }
 
     /// 場札の最後のカードのタップ時
-    func tapLastCard(_ recognizer: UITapGestureRecognizer) {
+    @objc func tapLastCard(_ recognizer: UITapGestureRecognizer) {
         guard let view = recognizer.view as? CardView else {
             assertionFailure()
             return
