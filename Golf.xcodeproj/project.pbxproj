@@ -18,9 +18,12 @@
 		CAE74098E4561ED639FCA950 /* CardViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7414401B4516DB2EADF80 /* CardViewDelegate.swift */; };
 		CAE741097AE7DBF60EF4BB26 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74B0B4E97567899A355CA /* DraggableView.swift */; };
 		CAE7417991743F1E6E7DD5E0 /* ConfigTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7489747052C9B0CCC561A /* ConfigTableViewCell.swift */; };
+		CAE7421C2E2973B14202C5CA /* Tutorial2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7458C4E64429485ACC06A /* Tutorial2ViewController.swift */; };
 		CAE7424C2F6694C9FF23A63D /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74265556329FCDC06A8AA /* MainNavigationController.swift */; };
+		CAE7425179173D4110A47AB1 /* Tutorial1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74A96174E6B8FD1BFDC54 /* Tutorial1ViewController.swift */; };
 		CAE7433E5F021538749621DC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE740B1E34460107DAF4B76 /* CardView.swift */; };
 		CAE743ADA1EB78BD06A41007 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74E29803BE4DCF5644C33 /* Row.swift */; };
+		CAE743D0E8C6F076F1420C8C /* Tutorial3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE742D044B5BA87F437A5EB /* Tutorial3ViewController.swift */; };
 		CAE746886315A0F8A277D3D7 /* PlayMatViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74ABE0E32F4D122D939DE /* PlayMatViewDelegate.swift */; };
 		CAE7470905B9E810648312E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7421F9C94921AB32D8651 /* Config.swift */; };
 		CAE747780DE3BA0228E7B9B4 /* PlayMatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7467793887D45C1B95F93 /* PlayMatView.swift */; };
@@ -28,8 +31,10 @@
 		CAE7496300D86CED1EEA9E1E /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74811968E44940EB49618 /* ConfigViewController.swift */; };
 		CAE7497BC654708F3DE076A3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE744116F0B2A4C8FCE5631 /* Card.swift */; };
 		CAE74AE00521909321BC0AD0 /* ConfigTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE749AE52C1D79DF797299F /* ConfigTableViewDataSource.swift */; };
+		CAE74B247951AEA27E00FE03 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74DB33E4DFC47D6267DE7 /* TutorialPageViewController.swift */; };
 		CAE74B36286CACD785442E7A /* GameResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7431086270E802C6099DF /* GameResultView.swift */; };
 		CAE74D540931C6FC7AE95200 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74B7BD4C53EA02D3477AE /* Column.swift */; };
+		CAE74DC474A817863850E674 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74117E8F03D5D0C2AFE30 /* RoundedButton.swift */; };
 		CAE74E16F94DDEDF4C2672E7 /* ConfigItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74CD564961DFF537B621C /* ConfigItem.swift */; };
 		CAE74E34E104F017BBC944DE /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE747E0EAEDC49EE2BA08A4 /* PlayingCard.swift */; };
 		CAE74ECFD5B04266C5D4C798 /* ConfigNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74F17636691305E1CB771 /* ConfigNavigationController.swift */; };
@@ -68,21 +73,26 @@
 		4E61ED621F21D0C800BE8F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4ED5784E1F26FE680010AF00 /* GameResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameResultView.xib; sourceTree = "<group>"; };
 		CAE740B1E34460107DAF4B76 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CAE74117E8F03D5D0C2AFE30 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CAE7414401B4516DB2EADF80 /* CardViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewDelegate.swift; sourceTree = "<group>"; };
 		CAE7421F9C94921AB32D8651 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CAE74265556329FCDC06A8AA /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		CAE742D044B5BA87F437A5EB /* Tutorial3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial3ViewController.swift; sourceTree = "<group>"; };
 		CAE7431086270E802C6099DF /* GameResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameResultView.swift; sourceTree = "<group>"; };
 		CAE744116F0B2A4C8FCE5631 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		CAE7458C4E64429485ACC06A /* Tutorial2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial2ViewController.swift; sourceTree = "<group>"; };
 		CAE7467793887D45C1B95F93 /* PlayMatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMatView.swift; sourceTree = "<group>"; };
 		CAE747E0EAEDC49EE2BA08A4 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		CAE74811968E44940EB49618 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		CAE7489747052C9B0CCC561A /* ConfigTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTableViewCell.swift; sourceTree = "<group>"; };
 		CAE7493AF8FB52319BEBB9D8 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		CAE749AE52C1D79DF797299F /* ConfigTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTableViewDataSource.swift; sourceTree = "<group>"; };
+		CAE74A96174E6B8FD1BFDC54 /* Tutorial1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tutorial1ViewController.swift; sourceTree = "<group>"; };
 		CAE74ABE0E32F4D122D939DE /* PlayMatViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMatViewDelegate.swift; sourceTree = "<group>"; };
 		CAE74B0B4E97567899A355CA /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		CAE74B7BD4C53EA02D3477AE /* Column.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		CAE74CD564961DFF537B621C /* ConfigItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigItem.swift; sourceTree = "<group>"; };
+		CAE74DB33E4DFC47D6267DE7 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		CAE74E29803BE4DCF5644C33 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		CAE74F17636691305E1CB771 /* ConfigNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +158,10 @@
 				CAE74811968E44940EB49618 /* ConfigViewController.swift */,
 				CAE749AE52C1D79DF797299F /* ConfigTableViewDataSource.swift */,
 				CAE74F17636691305E1CB771 /* ConfigNavigationController.swift */,
+				CAE74DB33E4DFC47D6267DE7 /* TutorialPageViewController.swift */,
+				CAE74A96174E6B8FD1BFDC54 /* Tutorial1ViewController.swift */,
+				CAE7458C4E64429485ACC06A /* Tutorial2ViewController.swift */,
+				CAE742D044B5BA87F437A5EB /* Tutorial3ViewController.swift */,
 			);
 			path = Golf;
 			sourceTree = "<group>";
@@ -199,6 +213,7 @@
 				CAE7431086270E802C6099DF /* GameResultView.swift */,
 				CAE74ABE0E32F4D122D939DE /* PlayMatViewDelegate.swift */,
 				CAE7489747052C9B0CCC561A /* ConfigTableViewCell.swift */,
+				CAE74117E8F03D5D0C2AFE30 /* RoundedButton.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -375,6 +390,11 @@
 				CAE7417991743F1E6E7DD5E0 /* ConfigTableViewCell.swift in Sources */,
 				CAE74E16F94DDEDF4C2672E7 /* ConfigItem.swift in Sources */,
 				CAE74ECFD5B04266C5D4C798 /* ConfigNavigationController.swift in Sources */,
+				CAE74B247951AEA27E00FE03 /* TutorialPageViewController.swift in Sources */,
+				CAE7425179173D4110A47AB1 /* Tutorial1ViewController.swift in Sources */,
+				CAE7421C2E2973B14202C5CA /* Tutorial2ViewController.swift in Sources */,
+				CAE743D0E8C6F076F1420C8C /* Tutorial3ViewController.swift in Sources */,
+				CAE74DC474A817863850E674 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,7 +563,7 @@
 				DEVELOPMENT_TEAM = TLE83Z6Q79;
 				INFOPLIST_FILE = Golf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = halawata13.Golf;
+				PRODUCT_BUNDLE_IDENTIFIER = net.halawata13.golf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -557,7 +577,7 @@
 				DEVELOPMENT_TEAM = TLE83Z6Q79;
 				INFOPLIST_FILE = Golf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = halawata13.Golf;
+				PRODUCT_BUNDLE_IDENTIFIER = net.halawata13.golf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

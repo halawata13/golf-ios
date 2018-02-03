@@ -12,7 +12,11 @@ class MainViewController: UIViewController {
 
         title = "Golf"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(onTapRestart))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Config", style: .plain, target: self, action: #selector(onTapConfig))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "設定", style: .plain, target: self, action: #selector(onTapConfig))
+
+        if !UserDefaults.standard.bool(forKey: "initial") {
+            present(storyboard!.instantiateViewController(withIdentifier: "TutorialPageViewController"), animated: false)
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
