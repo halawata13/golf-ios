@@ -7,11 +7,11 @@ class PlayMatView: UIView {
     static let gutterWidth = 40
     static let startY = 100
     static let overlapHeight = 30
-    static let deckX = 700
     static let stageY = 510
 
     let columns: Int
     let rows: Int
+    let deckX: Int
 
     var delegate: PlayMatViewDelegate?
 
@@ -24,6 +24,7 @@ class PlayMatView: UIView {
         // 設定を取得
         columns = Column.get()
         rows = Row.get()
+        deckX = Int(frame.width) / 2 + 200
 
         super.init(frame: frame)
 
@@ -72,7 +73,7 @@ class PlayMatView: UIView {
         // デッキを配置
         deckCardView = UIImageView(image: UIImage(named: "back"))
         deckCardView.isUserInteractionEnabled = true
-        deckCardView.frame.origin = CGPoint(x: PlayMatView.deckX, y: PlayMatView.stageY)
+        deckCardView.frame.origin = CGPoint(x: deckX, y: PlayMatView.stageY)
 
         let tapRestsCardsRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTapRestsCard))
         deckCardView.addGestureRecognizer(tapRestsCardsRecognizer)

@@ -3,15 +3,14 @@ import Foundation
 class Column: ConfigItem {
 
     static let title = "列の数"
-
-    static let min = 1
-    static let max = 6
-
     static let defaultNumber = 5
+
+    let min = 1
+    let max = 6
 
     var number: Int {
         didSet {
-            if number < Column.min || number > Column.max {
+            if number < min || number > max {
                 number = Column.defaultNumber
             }
 
@@ -20,11 +19,11 @@ class Column: ConfigItem {
     }
 
     var isMax: Bool {
-        return number == Column.max
+        return number == max
     }
 
     var isMin: Bool {
-        return number == Column.min
+        return number == min
     }
 
     init() {

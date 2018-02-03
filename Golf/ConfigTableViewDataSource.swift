@@ -15,9 +15,12 @@ class ConfigTableViewDataSource: NSObject, UITableViewDataSource {
             return cell
         }
 
+        cell.valueStepper.maximumValue = Double(configItem.max)
+        cell.valueStepper.minimumValue = Double(configItem.min)
+        cell.valueStepper.value = Double(configItem.number)
+
         cell.titleLabel.text = Config.titleList[indexPath.row]
-        cell.numberLabel.text = String(configItem.number)
-        cell.checkButtonEnabled(configItem: configItem)
+        cell.numberLabel.text = String(Int(cell.valueStepper.value))
 
         return cell
     }

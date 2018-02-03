@@ -3,10 +3,10 @@ import Foundation
 protocol ConfigItem: class {
 
     static var title: String { get }
-    static var min: Int { get }
-    static var max: Int { get }
     static var defaultNumber: Int { get }
 
+    var min: Int { get }
+    var max: Int { get }
     var number: Int { get set }
     var isMax: Bool { get }
     var isMin: Bool { get }
@@ -20,7 +20,7 @@ protocol ConfigItem: class {
 extension ConfigItem {
 
     func plus() {
-        if number == Self.max {
+        if number == max {
             return
         }
 
@@ -28,7 +28,7 @@ extension ConfigItem {
     }
 
     func minus() {
-        if number == Self.min {
+        if number == min {
             return
         }
 
