@@ -14,7 +14,7 @@ class ConfigViewController: UIViewController {
 
         configTableView.dataSource = dataSource
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(onDone))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "完了", style: .plain, target: self, action: #selector(onDone))
     }
 
     @objc func onDone() {
