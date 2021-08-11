@@ -1,6 +1,6 @@
 import Foundation
 
-protocol PlayMatViewDelegate: class {
+protocol PlayMatViewDelegate: AnyObject {
 
     func gameClear()
 }

@@ -210,7 +210,7 @@ extension PlayMatView: CardViewDelegate {
 
     /// 移動開始
     func touchesBegan(view: CardView) {
-        bringSubview(toFront: view)
+        bringSubviewToFront(view)
     }
 
     /// 移動中

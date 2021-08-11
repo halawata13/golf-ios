@@ -1,6 +1,6 @@
 import Foundation
 
-protocol CardViewDelegate: class {
+protocol CardViewDelegate: AnyObject {
 
     func touchesBegan(view: CardView)
 
